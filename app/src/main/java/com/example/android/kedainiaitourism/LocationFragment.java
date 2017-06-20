@@ -8,7 +8,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 
 public class LocationFragment extends Fragment {
@@ -17,8 +20,17 @@ public class LocationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_location, container, false);
-        TextView textView = (TextView) rootView.findViewById(R.id.plain_text);
-        textView.setText("You are on the LocationFragment");
+        final ArrayList<Data> data = new ArrayList<>();
+        data.add(new Data(R.mipmap.ic_launcher,"Senamiestis","Vienas is nedaugelio islikusiu senamiesciu"));
+        data.add(new Data(R.mipmap.ic_launcher,"Tiltas","Vienas is nedaugelio islikusiu senamiesciu"));
+        data.add(new Data(R.mipmap.ic_launcher,"Svirnas","Vienas is nedaugelio islikusiu senamiesciu"));
+        data.add(new Data(R.mipmap.ic_launcher,"Dvaras","Vienas is nedaugelio islikusiu senamiesciu"));
+
+
+        DataAdapter adapter = new DataAdapter(getActivity(), data);
+        ListView listView = (ListView) rootView.findViewById(R.id.list);
+        listView.setAdapter(adapter);
+
         return rootView;
     }
 }

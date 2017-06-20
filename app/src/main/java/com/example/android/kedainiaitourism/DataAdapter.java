@@ -38,17 +38,14 @@ public class DataAdapter extends ArrayAdapter<Data> {
         title.setText(currentData.getTitle());
         TextView description = (TextView) convertView.findViewById(R.id.description);
         description.setText(currentData.getDescription());
-/*        ImageView imageView=(ImageView) convertView.findViewById(R.id.listImage);
-        if(currentWord.hasImage()) {
-            imageView.setImageResource(currentWord.getImage());
+        ImageView imageView=(ImageView) convertView.findViewById(R.id.listImage);
+        if(currentData.hasImage()) {
+            imageView.setImageResource(currentData.getPicture());
             imageView.setVisibility(View.VISIBLE);
         }
         else
             imageView.setVisibility(View.GONE);
 
-        int color1= ContextCompat.getColor(getContext(),color);
-        LinearLayout l=(LinearLayout) listItemView.findViewById(R.id.background_color);
-        l.setBackgroundColor(color1);*/
         return convertView;
     }
 

@@ -28,15 +28,13 @@
             android:layout_height="wrap_content"
             android:id="@+id/title"
             android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/description"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@android:color/white" />
+            android:textAppearance="?android:textAppearanceMedium" />
 
     </LinearLayout>
 </RelativeLayout>

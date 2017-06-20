@@ -19,6 +19,9 @@ public class Data {
     public String getTitle(){
         return title;
     }
+    public boolean hasImage(){
+        return picture != -1;
+    }
     public String getDescription(){
         return description;
     }
