@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -22,6 +23,9 @@ public class RestaurantsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_restaurants, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_location, container, false);
+        TextView textView = (TextView) rootView.findViewById(R.id.plain_text);
+        textView.setText("You are on the RestaurantsFragment");
+        return rootView;
     }
 }
