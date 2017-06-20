@@ -20,13 +20,15 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:text="Visit" />
+    android:text="Visit"
+        android:id="@+id/visit"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="History"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:id="@+id/history"/>
 
 
 </LinearLayout>
